@@ -26,7 +26,52 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+// Helper to transform any YouTube URL into an embed link
+function formatYouTubeEmbedUrl(url) {
+  if (!url) return '';
+  
+  // Extract Video ID using Regex
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+  const match = url.match(regExp);
 
+  if (match && match[2].length === 11) {
+    return `https://www.youtube.com/embed/${match[2]}?autoplay=1`;
+  }
+  
+  return url;
+}
+
+// Event delegation for opening the modal
+document.addEventListener('click', (e) => {
+  const playBtn = e.target.closest('.play-btn') || e.target.closest('#heroWatchBtn');
+  
+  if (playBtn) {
+    const rawVideoUrl = playBtn.getAttribute('data-video');
+    const embedUrl = formatYouTubeEmbedUrl(rawVideoUrl);
+    
+    const iframe = document.getElementById('videoIframe');
+    const modal = document.getElementById('videoModal');
+    
+    if (iframe && modal) {
+      iframe.src = embedUrl;
+      modal.classList.add('active'); // or modal.style.display = 'block';
+    }
+  }
+});
+
+// Close Modal & Clear iframe src to stop video audio
+const closeBtn = document.getElementById('modalCloseBtn');
+const backdrop = document.getElementById('modalBackdrop');
+
+function closeModal() {
+  const iframe = document.getElementById('videoIframe');
+  const modal = document.getElementById('videoModal');
+  if (iframe) iframe.src = '';
+  if (modal) modal.classList.remove('active');
+}
+
+if (closeBtn) closeBtn.addEventListener('click', closeModal);
+if (backdrop) backdrop.addEventListener('click', closeModal);
   // Close Modal
   function closeModal() {
     if (modal) modal.classList.remove('active');
