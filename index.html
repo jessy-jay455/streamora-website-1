@@ -37,12 +37,22 @@
         <li><a href="#features" class="nav-item"><i data-lucide="sparkles"></i> AI Features</a></li>
         <li><a href="#" class="nav-item"><i data-lucide="bookmark"></i> My List</a></li>
       </ul>
-
+      
       <div class="nav-actions">
-        <div class="search-box header-search">
-          <i data-lucide="search" class="search-icon"></i>
-          <input type="text" id="headerSearchInput" placeholder="Search movies, shows...">
-        </div>
+  <div class="search-box header-search">
+    <i data-lucide="search" class="search-icon"></i>
+    <input type="text" id="headerSearchInput" placeholder="Search movies, shows...">
+  </div>
+
+  <!-- Authentication Triggers -->
+  <button class="btn btn-secondary nav-auth-btn" id="openAuthBtn">Log In</button>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+    <i data-lucide="menu"></i>
+  </button>
+      </div>
+
+    
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
           <i data-lucide="menu"></i>
         </button>
@@ -544,38 +554,43 @@
   </main>
 
   
-  <!-- Authentication Modal (Login / Sign Up) -->
-  <div class="modal" id="authModal">
-    <div class="modal-backdrop" id="authModalBackdrop"></div>
-    <div class="modal-content auth-modal-content">
-      <button class="modal-close" id="authCloseBtn" aria-label="Close modal">&times;</button>
-      <div class="auth-form-container">
-        <h2 id="authModalTitle">Welcome Back</h2>
-        <p id="authModalSubtitle">Sign in to your Streamora account</p>
+  <!--<!-- Authentication Modal -->
+<div class="modal" id="authModal">
+  <div class="modal-backdrop" id="authModalBackdrop"></div>
+  <div class="modal-content auth-modal-content">
+    <button class="modal-close" id="authCloseBtn" aria-label="Close modal">&times;</button>
+    
+    <div class="auth-form-container">
+      <h2 id="authModalTitle">Welcome Back</h2>
+      <p id="authModalSubtitle">Sign in to your Streamora account</p>
 
-        <form id="authForm" onsubmit="event.preventDefault();">
-          <div class="form-group" id="nameGroup" style="display: none;">
-            <label for="authName">Full Name</label>
-            <input type="text" id="authName" placeholder="John Doe">
-          </div>
-          <div class="form-group">
-            <label for="authEmail">Email Address</label>
-            <input type="email" id="authEmail" placeholder="you@example.com" required>
-          </div>
-          <div class="form-group">
-            <label for="authPassword">Password</label>
-            <input type="password" id="authPassword" placeholder="••••••••" required>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full" id="authSubmitBtn">Log In</button>
-        </form>
+      <form id="authForm">
+        <!-- Hidden by default for Login, visible for Sign Up -->
+        <div class="form-group" id="nameGroup" style="display: none;">
+          <label for="authName">Full Name</label>
+          <input type="text" id="authName" placeholder="John Doe">
+        </div>
 
-        <p class="auth-toggle-text">
-          <span id="authToggleQuestion">Don't have an account?</span>
-          <a href="#" id="authToggleLink">Sign Up</a>
-        </p>
-      </div>
+        <div class="form-group">
+          <label for="authEmail">Email Address</label>
+          <input type="email" id="authEmail" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="authPassword">Password</label>
+          <input type="password" id="authPassword" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full" id="authSubmitBtn">Log In</button>
+      </form>
+
+      <p class="auth-toggle-text">
+        <span id="authToggleQuestion">Don't have an account?</span>
+        <a href="#" id="authToggleLink">Sign Up</a>
+      </p>
     </div>
   </div>
+</div>
 
   <!-- Subscription Payment Modal -->
   <div class="modal" id="paymentModal">
