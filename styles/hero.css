@@ -43,12 +43,19 @@
   margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
 .hero-meta {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
   color: var(--text-muted);
+  flex-wrap: wrap;
 }
 
 .rating {
@@ -72,4 +79,5 @@
 .hero-actions {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }

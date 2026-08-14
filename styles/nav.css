@@ -25,6 +25,7 @@
   letter-spacing: 1px;
   color: #fff;
 }
+
 .text-white {
   color: #ffffff;
 }
@@ -41,7 +42,6 @@
   color: var(--accent);
   display: flex;
 }
-
 
 .nav-links {
   display: flex;

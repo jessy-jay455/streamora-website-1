@@ -51,7 +51,6 @@
   </header>
 
   <main>
-   
     <!-- Hero Section -->
     <section class="hero" style="background-image: url('images/495519.jpg');">
       <div class="hero-bg-overlay"></div>
@@ -106,32 +105,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Content Grid Section -->
-    <section class="explore container" id="explore">
-      <div class="explore-header">
-        <div>
-          <h2>Explore Trending Media</h2>
-          <p>Filter by dynamic media categories or live keyword search</p>
-        </div>
-
-        <div class="search-box explore-search">
-          <i data-lucide="search" class="search-icon"></i>
-          <input type="text" id="searchInput" placeholder="Filter titles...">
-        </div>
-      </div>
-
-      <!-- Filter Tabs -->
-      <div class="tab-container" id="tabContainer">
-        <button class="tab-btn active" data-category="all">All Content</button>
-        <button class="tab-btn" data-category="movies">Movies</button>
-        <button class="tab-btn" data-category="tv">TV Shows</button>
-        <button class="tab-btn" data-category="action">Action</button>
-        <button class="tab-btn" data-category="sci-fi">Sci-Fi</button>
-        <button class="tab-btn" data-category="drama">Drama</button>
-      </div>
-
-      
 
     <!-- AI Mood Selector Section -->
     <section class="mood-section container" id="mood">
@@ -188,6 +161,8 @@
         <button class="tab-btn" data-category="drama">Drama</button>
       </div>
 
+      <!-- Card Grid Container -->
+      <div class="card-grid" id="cardGrid">
         <div class="content-card" data-category="movies sci-fi action" data-title="Dune: Part Two">
           <div class="card-poster">
             <img src="images/dune-part-two.jpg" alt="Dune Part Two Poster">
@@ -204,8 +179,9 @@
 
         <div class="content-card" data-category="movies action drama" data-title="The Woman King">
           <div class="card-poster">
-            <img src="images/the-woman- king.jpg" alt="The Woman King Poster">
-            <div class="card-overlay"></div> <button class="play-btn" data-video="https://youtu.be//3RDaPV_rJ1Y?si=WZHUcW95eRU4smyl"><i data-lucide="play"></i></button>
+            <img src="images/the-woman-king.jpg" alt="The Woman King Poster">
+            <div class="card-overlay">
+              <button class="play-btn" data-video="https://youtu.be//3RDaPV_rJ1Y?si=WZHUcW95eRU4smyl"><i data-lucide="play"></i></button>
             </div>
             <span class="badge-tag">Action</span>
           </div>
@@ -219,7 +195,7 @@
           <div class="card-poster">
             <img src="images/jumanji.jpg" alt="Jumanji Poster">
             <div class="card-overlay">
-              <button class="play-btn" data-video="https://youtu.be//Qpy6gAS-dcU?si=N_ovV7gds15qw9CR"><i data-lucide="play"></i></button>
+              <button class="play-btn" data-video="https://youtu.be//Qpy6gAS-dcU?si=N_ovV7gds15qw9CR""><i data-lucide="play"></i></button>
             </div>
             <span class="badge-tag">Adventure</span>
           </div>
@@ -313,7 +289,7 @@
           </div>
         </div>
 
-        <div class="content-card" data-category="movies drama" data-title="Beauty and the Beast ">
+        <div class="content-card" data-category="movies drama" data-title="Beauty and the Beast">
           <div class="card-poster">
             <img src="images/beauty-and-the-beast.jpg" alt="Beauty and the Beast Poster">
             <div class="card-overlay">
@@ -345,7 +321,7 @@
           <div class="card-poster">
             <img src="images/shrek-2.jpg" alt="Shrek 2 Poster">
             <div class="card-overlay">
-              <button class="play-btn" data-video="https://youtu.be/8_C-sHMDv3A"><i data-lucide="play"></i></button>
+              <button class="play-btn" data-video="https://youtu.be/1IisaDsE2XQ"><i data-lucide="play"></i></button>
             </div>
             <span class="badge-tag">Animation</span>
           </div>
@@ -359,7 +335,7 @@
           <div class="card-poster">
             <img src="images/venom-let-there-be-carnage.jpg" alt="Venom Let There Be Carnage Poster">
             <div class="card-overlay">
-              <button class="play-btn" data-video="https://youtu.be/rrwBnlYOp4g?si=YFLM6DN4S01zqTs6"><i data-lucide="play"></i></button>
+              <button class="play-btn" data-video="https://youtu.be/-FmWuCgJmxo?si=Oc35HHNkUZSkM65b"><i data-lucide="play"></i></button>
             </div>
             <span class="badge-tag">Action</span>
           </div>
@@ -373,7 +349,7 @@
           <div class="card-poster">
             <img src="images/kung-fu-panda.jpg" alt="Kung Fu Panda Poster">
             <div class="card-overlay">
-              <button class="play-btn" data-video="https://youtu.be/OdVo50xsKtA?si=aozRMkCpCpbPIYwN"><i data-lucide="play"></i></button>
+              <button class="play-btn" data-video="https://youtu.be/_inKs4eeHiI"><i data-lucide="play"></i></button>
             </div>
             <span class="badge-tag">Animation</span>
           </div>
@@ -454,9 +430,8 @@
         </div>
       </div>
     </section>
-  </main>
  
- <!-- Subscription Plans & Payment Section -->
+    <!-- Subscription Plans & Payment Section -->
     <section class="pricing container" id="pricing">
       <div class="section-header">
         <h2>Choose Your Streaming Plan</h2>
@@ -514,102 +489,38 @@
         </div>
       </div>
     </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-      <div class="container">
-        <div class="section-header">
-          <h2>Next-Gen Streaming Features</h2>
-          <p>Powered by neural discovery and high-fidelity video processing.</p>
-        </div>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon"><i data-lucide="bot"></i></div>
-            <h3>Smart AI Curation</h3>
-            <p>Personalized feeds tuned instantly to your emotional state and watching habits.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i data-lucide="zap"></i></div>
-            <h3>4K HDR Bufferless</h3>
-            <p>Adaptive bitrate streaming that guarantees smooth playback on any screen.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i data-lucide="gift"></i></div>
-            <h3>Rewards Program</h3>
-            <p>Earn Streamora XP points while watching and unlock exclusive creator badges.</p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
-
   
-  <!-- Authentication Modal (Login / Sign Up) -->
-  <div class="modal" id="authModal">
-    <div class="modal-backdrop" id="authModalBackdrop"></div>
-    <div class="modal-content auth-modal-content">
-      <button class="modal-close" id="authCloseBtn" aria-label="Close modal">&times;</button>
-      <div class="auth-form-container">
-        <h2 id="authModalTitle">Welcome Back</h2>
-        <p id="authModalSubtitle">Sign in to your Streamora account</p>
+  <!-- Login Section -->
+  <main class="login-main">
+    <div class="login-card">
+      <div class="login-header">
+        <h2>Welcome Back</h2>
+        <p>Enter your details to access your account.</p>
+      </div>
 
-        <form id="authForm" onsubmit="event.preventDefault();">
-          <div class="form-group" id="nameGroup" style="display: none;">
-            <label for="authName">Full Name</label>
-            <input type="text" id="authName" placeholder="John Doe">
-          </div>
-          <div class="form-group">
-            <label for="authEmail">Email Address</label>
-            <input type="email" id="authEmail" placeholder="you@example.com" required>
-          </div>
-          <div class="form-group">
-            <label for="authPassword">Password</label>
-            <input type="password" id="authPassword" placeholder="••••••••" required>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full" id="authSubmitBtn">Log In</button>
-        </form>
+      <form class="login-form" id="loginForm">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="name@example.com" required>
+        </div>
 
-        <p class="auth-toggle-text">
-          <span id="authToggleQuestion">Don't have an account?</span>
-          <a href="#" id="authToggleLink">Sign Up</a>
-        </p>
+        <div class="form-group">
+          <div class="label-row">
+            <label for="password">Password</label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+      </form>
+
+      <div class="login-footer">
+        <p>Don't have an account? <a href="#" class="text-purple">Sign up</a></p>
       </div>
     </div>
-  </div>
-
-  <!-- Subscription Payment Modal -->
-  <div class="modal" id="paymentModal">
-    <div class="modal-backdrop" id="paymentModalBackdrop"></div>
-    <div class="modal-content payment-modal-content">
-      <button class="modal-close" id="paymentCloseBtn" aria-label="Close modal">&times;</button>
-      <div class="payment-container">
-        <h2>Subscribe to <span id="selectedPlanName">Standard AI</span></h2>
-        <p class="payment-total">Total due today: <strong id="selectedPlanPrice">$13.99</strong></p>
-
-        <form id="paymentForm" onsubmit="event.preventDefault();">
-          <div class="form-group">
-            <label for="cardName">Cardholder Name</label>
-            <input type="text" id="cardName" placeholder="Jane Doe" required>
-          </div>
-          <div class="form-group">
-            <label for="cardNumber">Card Number</label>
-            <input type="text" id="cardNumber" placeholder="4532 •••• •••• 8892" required maxlength="19">
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="cardExpiry">Expiry Date</label>
-              <input type="text" id="cardExpiry" placeholder="MM/YY" required maxlength="5">
-            </div>
-            <div class="form-group">
-              <label for="cardCvc">CVC/CVV</label>
-              <input type="password" id="cardCvc" placeholder="123" required maxlength="4">
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">Complete Payment</button>
-        </form>
-      </div>
-    </div>
-  </div>
+  </main>
 
   <!-- Footer Section -->
   <footer class="site-footer">
@@ -629,6 +540,7 @@
       <p class="copyright">&copy; 2026 Streamora Inc. All rights reserved.</p>
     </div>
   </footer>
+
   <!-- Video Trailer Modal -->
   <div id="videoModal" class="modal">
     <div id="modalBackdrop" class="modal-backdrop"></div>
@@ -651,5 +563,53 @@
   <script src="js/modal.js"></script>
 </body>
 </html>
+    <!-- Content Grid Section -->
+    <section class="explore container" id="explore">
+      <div class="explore-header">
+        <div>
+          <h2>Explore Trending Media</h2>
+          <p>Filter by dynamic media categories, live keyword search, or mood</p>
+        </div>
 
-  
+        <div class="search-box explore-search">
+          <i data-lucide="search" class="search-icon"></i>
+          <input type="text" id="searchInput" placeholder="Filter titles...">
+        </div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="tab-container" id="tabContainer">
+        <button class="tab-btn active" data-category="all">All Content</button>
+        <button class="tab-btn" data-category="movies">Movies</button>
+        <button class="tab-btn" data-category="tv">TV Shows</button>
+        <button class="tab-btn" data-category="action">Action</button>
+        <button class="tab-btn" data-category="sci-fi">Sci-Fi</button>
+        <button class="tab-btn" data-category="drama">Drama</button>
+      </div>
+
+
+        
+
+      
+
+       
+
+       
+
+        
+
+       
+
+       
+
+       
+
+      
+
+        
+       
+
+       
+
+        
+       

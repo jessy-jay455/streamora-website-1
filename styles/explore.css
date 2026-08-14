@@ -17,6 +17,11 @@
   margin-bottom: 2rem;
   overflow-x: auto;
   padding-bottom: 0.5rem;
+  scrollbar-width: none; /* Hide scrollbar for mobile */
+}
+
+.tab-container::-webkit-scrollbar {
+  display: none;
 }
 
 .tab-btn {
@@ -35,10 +40,18 @@
   border-color: var(--accent);
 }
 
+/* Card Grid Layout Fixed */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
 }
 
 .content-card {

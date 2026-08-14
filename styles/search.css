@@ -12,6 +12,7 @@
   color: #fff;
   outline: none;
   transition: var(--transition);
+  width: 100%;
 }
 
 .search-box input:focus {
